@@ -1,0 +1,19 @@
+<apex:page Controller="searchDetailsController">
+    <apex:form >
+        <apex:pageBlock title="Search Related Contacts">
+            <apex:inputText value="{!searchKey}" label="Input"/>
+            <apex:commandButton value="Search" action="{!search}"/>
+        </apex:pageBlock>
+     </apex:form>
+        <apex:pageBlock title="Related Contacts">
+            <apex:pageBlockTable value="{!ct}" var="c">
+                <apex:column value="{!c.name}"/>
+                <apex:column value="{!c.Title}"/>
+                <apex:column value="{!c.Phone}"/>
+                <apex:column value="{!c.Is_Primary_Contact__c}"/>
+                <apex:column >
+                    <apex:outputlink value="/{!c.Id}">Set As A Primary</apex:outputlink>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock> 
+</apex:page>

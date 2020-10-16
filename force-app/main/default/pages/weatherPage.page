@@ -1,0 +1,11 @@
+<apex:page standardController="Account" extensions="testWeather" >
+     <apex:form >
+        <apex:pageBlock title="{!city} Weather">
+            <apex:pageBlockSection >
+                <apex:outputText label="Description" value="{!controllerDescription}"></apex:outputText>
+                <apex:outputText label="Temperature" value="{!controllerTemp}"></apex:outputText>
+                <apex:outputText label="Icon" value="{!controllerIcon}"></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
